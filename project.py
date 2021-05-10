@@ -1,29 +1,4 @@
-# Assignment: MathDojo
-# Objectives:
-
-#     Practice creating a class and creating new instances
-#     Practice chaining methods
-#     Practice writing flexible functions that can take a varying number of arguments
-
-# Create a Python class called MathDojo that has one attribute, result, and 2 methods: add and subtract. The 2 methods each must take at least 1 parameter, but could take many more.
-class MathDojo:
-    def __init__(self):
-    	self.result = 0
-    
-    def add(self, num, *nums):
-    	# your code here
-        self.result += num
-        for n in nums:
-            self.result += n
-        return self
-
-    def subtract(self, num, *nums):
-    	# your code here
-        self.result -= num
-        for n in nums:
-            self.result -= n
-        return self
-
+from mathdojo import MathDojo
 
 # create an instance:
 md = MathDojo()
@@ -40,7 +15,6 @@ print(x)
 # # to test:
 x = md.add(2).add(2,5,1).subtract(3,2).result
 print(x)	# should print 5
-# # run each of the methods a few more times and check the result!
 
 
 
